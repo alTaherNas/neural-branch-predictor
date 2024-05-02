@@ -109,25 +109,25 @@ The following sections present some of the key findings from the experiments con
 
 Increasing the number of perceptrons consistently improves the prediction accuracy across different benchmarks. This suggests that a larger number of perceptrons enhances the predictor's ability to capture complex branch patterns.
 
-![Number of Perceptrons](dealII_accuracy_vs_num_perceptrons_ghr32_lhr16_lht4096_hash3.png)
+![Number of Perceptrons](results/dealII_accuracy_vs_num_perceptrons_ghr32_lhr16_lht4096_hash3.png)
 
 ### Global History Register Length
 
 Longer global history register lengths initially improve accuracy but may lead to a decrease in accuracy beyond a certain threshold for both benchmarks. This behavior indicates that capturing too much history can introduce noise and hinder the predictor's ability to adapt to changing branch patterns. Finding the right balance between history length and accuracy is crucial for optimal predictor performance across different workloads.
 
-![Global History Register Length](libquantum_accuracy_vs_ghr_length_perceptrons1024_lhr16_lht4096_hash3.png)
+![Global History Register Length](results/libquantum_accuracy_vs_ghr_length_perceptrons1024_lhr16_lht4096_hash3.png)
 
 ### Hashing Scheme Comparison
 
 The choice of hashing scheme significantly affects the prediction accuracy. Among the explored hashing schemes, hashing scheme 3 achieves the best accuracy for both the dealII and libquantum benchmarks. This highlights the importance of selecting an appropriate hashing function that minimizes aliasing and maximizes table utilization, and the effectiveness of this hashing scheme across different benchmarks.
 
-![Hashing Scheme Comparison](libquantum_accuracy_vs_hashing_scheme_perceptrons1024_ghr32_lhr16_lht4096_hash3.png)
+![Hashing Scheme Comparison](results/libquantum_accuracy_vs_hashing_scheme_perceptrons1024_ghr32_lhr16_lht4096_hash3.png)
 
 ### Local History Table Size
 
 The following image shows the impact of local history table size on the prediction accuracy for the libquantum benchmark:
 
-![Local History Table Size](libquantum_accuracy_vs_lht_size_perceptrons1024_ghr32_lhr16_hash3.png)
+![Local History Table Size](results/libquantum_accuracy_vs_lht_size_perceptrons1024_ghr32_lhr16_hash3.png)
 
 The plot demonstrates that increasing the local history table size improves the prediction accuracy up to a certain point, beyond which the accuracy stabilizes or slightly decreases.
 
@@ -149,7 +149,7 @@ The script will generate a plot illustrating how the predictor's confidence evol
 
 Hashing can be used to mitigate the impact of aliasing by increasing the entropy and improving the utilization of the tables. The following image compares the access patterns of a naive predictor and a hashed predictor:
 
-![Access Patterns](access_pattern.png)
+![Access Patterns](results/access_pattern.png)
 
 The hashed predictor exhibits a more spread-out access pattern, indicating better table utilization and reduced aliasing.
 
