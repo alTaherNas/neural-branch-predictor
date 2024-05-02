@@ -1,0 +1,9 @@
+Branches:         14531715496
+Mispredictions:      3082611507
+Misprediction Rate:  21.21%
+Accuracy:        78.79%
+NUM_PERCEPTRONS: 1024
+GHR_LENGTH: 32
+LHR_LENGTH: 16
+LHT_SIZE: 4096
+HASHING_SCHEME: 7
