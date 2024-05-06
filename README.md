@@ -1,3 +1,6 @@
+Here's the updated README.md file with the information about the four spaces and the image included:
+
+```markdown
 # Perceptron-Based Branch Predictor
 
 This project explores the design space of perceptron-based branch predictors using the Pin tool and benchmarks from the SPEC suite. The goal is to investigate various parameters and configurations to optimize the performance of perceptron-based branch predictors.
@@ -17,6 +20,7 @@ This project explores the design space of perceptron-based branch predictors usi
   - [Local History Table Size](#local-history-table-size)
 - [Confidence Estimation](#confidence-estimation)
 - [Access Patterns and Hashing](#access-patterns-and-hashing)
+- [Branch Predictor Spaces](#branch-predictor-spaces)
 - [Acknowledgments](#acknowledgments)
 
 ## Project Structure
@@ -153,6 +157,20 @@ Hashing can be used to mitigate the impact of aliasing by increasing the entropy
 
 The hashed predictor exhibits a more spread-out access pattern, indicating better table utilization and reduced aliasing.
 
+## Branch Predictor Spaces
+
+In the design of branch predictors, there are three key spaces to consider:
+
+1. **Address Design Space**: This represents all possible ways we can combine program counter, predictor state, and local and global history to index into each of the tables. Hashing is then a study of how we control indexing into these tables and how that affects the performance of our predictors.
+
+2. **State Design Space**: This is the space of all possible states of the branch predictor itself. In the case of a perceptron predictor, this would be the number of perceptron weights.
+
+3. **History Design Space**: This captures various combinations of local and global history lengths we record. 
+
+![Predictor Hardware](results/predictor-hardware.png)
+
+
 ## Acknowledgments
 
 This project was done as part of a project for Harvard University's CS 246 Advanced Computer Architecture course.
+```
