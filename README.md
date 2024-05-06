@@ -170,4 +170,3 @@ In the design of branch predictors, there are three key spaces to consider:
 ## Acknowledgments
 
 This project was done as part of a project for Harvard University's CS 246 Advanced Computer Architecture course.
-```
