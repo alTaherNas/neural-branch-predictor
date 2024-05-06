@@ -1,6 +1,3 @@
-Here's the updated README.md file with the information about the four spaces and the image included:
-
-```markdown
 # Perceptron-Based Branch Predictor
 
 This project explores the design space of perceptron-based branch predictors using the Pin tool and benchmarks from the SPEC suite. The goal is to investigate various parameters and configurations to optimize the performance of perceptron-based branch predictors.
